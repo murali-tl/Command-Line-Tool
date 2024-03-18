@@ -1,6 +1,4 @@
- 
-
-Command line tool 
+#                                              Command line tool 
 
 Build a custom Command line tool which can behave like your system’s CMD/terminal. 
 
@@ -9,55 +7,54 @@ Build a custom Command line tool which can behave like your system’s CMD/termi
  
  Handle the following commands: 
 
- `register <command_name> <Executor>`: 
+ 1. `register <command_name> <Executor>`: 
 
-Registers a command and actions assigned to the command. 
+     i) Registers a command and actions assigned to the command. 
 
-On register, the command should be auto activated. 
+     ii) On register, the command should be auto activated. 
 
-Executor is an object, which should be stored against the `command_name` at the time of registering. You must use this object while running the registered commands. 
+     Executor is an object, which should be stored against the `command_name` at the time of registering. You must use this object while running the registered commands. 
 
-a 
 
-`unregister <command_name>`: 
+2. `unregister <command_name>`: 
 
-unregister a command 
-
- 
-`activate <command_name>`: 
-
-activates the command mentioned in the `< command_name>`, it makes the user to gain access to run this command. 
+    unregister a command 
 
  
-`deactivate <command_name>`: 
+3. `activate <command_name>`: 
 
-deactivates the command mentioned in the `< command_name>`, it makes the user to loss access to run this command. 
-
- 
-`history <count>`: 
-
-print <count> latest commands (no need to persist), default count is 5 
+    activates the command mentioned in the `< command_name>`, it makes the user to gain access to run this command. 
 
  
-`log <options>` - Logs commands from the log file location 
+4. `deactivate <command_name>`: 
 
-`log --start <path>` - start logging and the save the log at given path. Ex: log --start C:/Users/UserName/log.txt 
+    deactivates the command mentioned in the `< command_name>`, it makes the user to loss access to run this command. 
 
-`log --all`           - print all commands from the current log file 
+ 
+5. `history <count>`: 
 
-`log --tail 9`      - print last 9 commands from the current log file 
+    print <count> latest commands (no need to persist), default count is 5 
 
-`log --head 9`   - print first 9 commands from the current log file 
+ 
+6. `log <options>` - Logs commands from the log file location 
 
-`log --clear`      - clears all logs from the current log file 
+   i) `log --start <path>` - start logging and the save the log at given path. Ex: log --start C:/Users/UserName/log.txt 
 
-`log --stop`       - stops logging commands but keep the current log file 
+   ii) `log --all`           - print all commands from the current log file 
+
+   iii) `log --tail 9`      - print last 9 commands from the current log file 
+
+   iv) `log --head 9`   - print first 9 commands from the current log file 
+
+   v) `log --clear`      - clears all logs from the current log file 
+
+   vi) `log --stop`       - stops logging commands but keep the current log file 
 
  
 
 Logging: 
 
-You need to log all the commands in the current log file in the below pattern 
+   You need to log all the commands in the current log file in the below pattern 
 
 All the commands must handle `--help` argument, it should print the usage description of the command. 
 
@@ -65,11 +62,11 @@ Example:
 
 `$ register --help` 
 
-Prints -> `Used to register a command and actions assigned to the command `register <command_name>`` 
+  Prints -> `Used to register a command and actions assigned to the command `register <command_name>`` 
 
  
 
-**Math Module** 
+# Math Module 
 
 Built this module in the above command-line project by implementing a `MathHandler` class for following methods: 
 
@@ -100,21 +97,29 @@ Following are the commands which can be handled using the `math`.
  
 
 `math --add 1 2 3 4 4` or `math -a 1 2 3 4 4` 
+
+
 14 
 
   
 
-`math --subtract 1 2 2` or `math -s 1 2 2` 
+`math --subtract 1 2 2` or `math -s 1 2 2`
+
+
 -3 
 
   
 
 `math --multiply 1 2 3 4` or `math -m 1 2 3 4` 
+
+
 24 
 
   
 
-`math --divide 4 2` or `math -d 4 2` 
+`math --divide 4 2` or `math -d 4 2`
+
+
 2 
 
   
