@@ -1,0 +1,4 @@
+S.No.	TimeStamp  	Command
+1	1710223080633	register --help
+1	1710223165702	--help
+2	1710223173952	-h
