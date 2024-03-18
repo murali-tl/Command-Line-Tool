@@ -1,4 +1,3 @@
-//const { Console } = require('console');
 class Log {
     constructor(filePath) {
         this.path = filePath;
